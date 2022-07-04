@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoREST.Views.TodoItemPage">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Nombre [Ingresar ITEM]" />
+            <Entry Text="{Binding Path=Name}" 
+               Placeholder="Ingresar Item" 
+               BackgroundColor="white"
+               TextColor="CadetBlue"/>
+            <Label Text="Notas" />
+            <Entry Text="{Binding Path=Notes}"
+               Placeholder="Enter notes" 
+               BackgroundColor="white"
+               TextColor="CadetBlue"/>
+            <Label Text="Done" />
+            <Switch IsToggled="{Binding Path=Done}" />
+            <Button Text="Save" 
+                BackgroundColor="#2FA462"  
+                Clicked="OnSaveButtonClicked" />
+            <Button Text="Delete"
+                BackgroundColor="#2FA462"  
+                Clicked="OnDeleteButtonClicked" />
+            <Button Text="Cancel" 
+                BackgroundColor="CadetBlue"  
+                Clicked="OnCancelButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
